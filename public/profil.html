@@ -1,0 +1,98 @@
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../resources/fanpage_platinumchip_logo.ico">
+        <meta charset="utf-8">
+        <meta name="description" content="Strona poświęcona fanom serii Fallout a w szczególności Fallout: New Vegas">
+        <meta name="keywords" content="Fallout, New Vegas, Vegas, NCR, Caesar Legion, House">
+        <meta name="author" content="Mateusz Pałka">
+        <script src="script.js"></script>
+        <title>Fallout: New Vegas - Fanpage</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html">
+                <div class="linkPrzycisk">
+                    <b>STRONA GŁÓWNA</b>
+                </div>
+            </a>
+            <a href="frakcje.html">
+                <div class="linkPrzycisk">
+                    <b>FRAKCJE MOJAVE</b>
+                </div>
+            </a>
+            <a href="kontakt.html">
+                <div class="linkPrzycisk">
+                    <b>KONTAKT</b>
+                </div>
+            </a>
+            <a href="informacje.html">
+                <div class="linkPrzycisk">
+                    <b>INFORMACJE</b>
+                </div>
+            </a>
+            
+            <div id="zalogowany">
+                <a href="logowanie.html" class="linkDoProfilu"><b>ZALOGUJ SIĘ</b></a>
+            </div>
+
+            <img src="../resources/fanpage_logo.png" alt="fanpage logo" id="logo-nv">
+        </header>
+
+        <section id="profil">
+            <h2 id="nazwa-prof">Nazwa</h2>
+            <img src="../resources/no-image.png" alt="zdjecie profilu" id="zdjecie-prof">
+            <p>
+                <div class="daneProf">
+                    <br>
+                    Imię: <span id="imie-prof" class="daneUzytkownika"></span><br>
+                </div>
+                <div class="daneProf">
+                    Nazwisko: <span id="nazwisko-prof" class="daneUzytkownika"></span><br>
+                </div>
+                <div class="daneProf">
+                    Email: <span id="email" class="daneUzytkownika"></span><br>
+                </div>
+                <div class="daneProf">
+                    Tel: <span id="tel" class="daneUzytkownika"></span><br>
+                </div>
+                <b>Bio:</b>
+                <div id="dane-bio">
+                    <span id="bio"></span>
+                </div>
+                <div id="dane-edytuj">
+                    <input type="submit" value="Edytuj profil" id="przycisk-edytuj">
+                </div>
+            </p>
+        </section>
+
+        <script>
+            wyswietlProfil();
+            function wyswietlProfil() {
+                const parametry = new URLSearchParams(window.location.search);
+                const uzytkownik = parametry.get("uzytkownik");
+                const zdjecieProfilu = document.getElementById('zdjecie-prof');
+                const nazwaPliku = `${uzytkownik}.jpg`;
+        
+                fetch("users.json").then(response => response.json()).then(data => {
+                        const user = data[uzytkownik];
+        
+                        document.getElementById("nazwa-prof").textContent = user.nazwa;
+                        document.getElementById("imie-prof").textContent = user.imie;
+                        document.getElementById("nazwisko-prof").textContent = user.nazwisko;
+                        document.getElementById("email").textContent = user.email;
+                        document.getElementById("tel").textContent = user.tel;
+                        document.getElementById("bio").textContent = user.bio;
+                        zdjecieProfilu.src = `../resources/${nazwaPliku}`;
+                    });
+            }
+            wyswietlProfil();
+
+            document.getElementById('przycisk-edytuj').addEventListener('click', function()
+            {
+                window.location.href = 'profil_edycja.html';
+            });
+        </script>
+    </body>
+</html>

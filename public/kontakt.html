@@ -1,0 +1,94 @@
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../resources/fanpage_platinumchip_logo.ico">
+        <meta charset="utf-8">
+        <meta name="description" content="Strona poświęcona fanom serii Fallout a w szczególności Fallout: New Vegas">
+        <meta name="keywords" content="Fallout, New Vegas, Vegas, NCR, Caesar Legion, House">
+        <meta name="author" content="Mateusz Pałka">
+        <script src="script.js"></script>
+        <title>Fallout: New Vegas - Fanpage</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html">
+                <div class="linkPrzycisk">
+                    <b>STRONA GŁÓWNA</b>
+                </div>
+            </a>
+            <a href="frakcje.html">
+                <div class="linkPrzycisk">
+                    <b>FRAKCJE MOJAVE</b>
+                </div>
+            </a>
+            <a href="kontakt.html">
+                <div class="linkPrzycisk">
+                    <b>KONTAKT</b>
+                </div>
+            </a>
+            <a href="informacje.html">
+                <div class="linkPrzycisk">
+                    <b>INFORMACJE</b>
+                </div>
+            </a>
+            
+            <div id="zalogowany">
+                <a href="logowanie.html" class="linkDoProfilu"><b>ZALOGUJ SIĘ</b></a>
+            </div>
+
+            <img src="../resources/fanpage_logo.png" alt="fanpage logo" id="logo-nv">
+        </header>
+
+        <section id="panel-kontaktowy">
+            <div id="naglowek-formularza">
+                <h2>Formularz kontaktowy</h2>
+            </div>
+            <form>
+                <div class="daneWprowadzaneTlo">
+                    <label>
+                        Nazwa użytkownika:
+                        <input type="text" class="daneWprowadzane" id="nazwa" required>
+                    </label><br>
+                </div>
+                <div class="daneWprowadzaneTlo">
+                    <label>
+                        Imię:
+                        <input type="text" class="daneWprowadzane" id="imie" required>
+                    </label><br>
+                </div>
+                <div class="daneWprowadzaneTlo">
+                    <label>
+                        Nazwisko:
+                        <input type="text" class="daneWprowadzane" id="nazwisko" required>
+                    </label><br>
+                </div>
+                <div class="daneWprowadzaneTlo">
+                    <label>
+                        E-mail kontaktowy:
+                        <input type="text" class="daneWprowadzane" id="email" required>
+                    </label><br>
+                </div>
+                <div class="daneWprowadzaneTlo">
+                    <label>
+                        Powód kontaktu:
+                        <select class="daneWprowadzane">
+                            <option>Pytanie</option>
+                            <option>Propozycja zmian</option>
+                            <option>Zgłoszenie użytkownika</option>
+                            <option>Zgłoszenie błędu strony</option>
+                            <option>Inny powód</option>
+                        </select>
+                    </label><br><br>
+                </div>
+                <div class="daneWprowadzaneTlo">
+                    <label>
+                        Opis:
+                        <textarea class="opis"></textarea>
+                    </label><br>
+                </div>
+                <input type="submit" value="Wyślij" id="przycisk-wyslij" onclick="kontakt()">
+            </form>
+        </section>        
+    </body>
+</html>

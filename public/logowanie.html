@@ -1,0 +1,64 @@
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../resources/fanpage_platinumchip_logo.ico">
+        <meta charset="utf-8">
+        <meta name="description" content="Strona poświęcona fanom serii Fallout a w szczególności Fallout: New Vegas">
+        <meta name="keywords" content="Fallout, New Vegas, Vegas, NCR, Caesar Legion, House">
+        <meta name="author" content="Mateusz Pałka">
+        <script src="script.js"></script>
+        <title>Fallout: New Vegas - Fanpage</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html">
+                <div class="linkPrzycisk">
+                    <b>STRONA GŁÓWNA</b>
+                </div>
+            </a>
+            <a href="frakcje.html">
+                <div class="linkPrzycisk">
+                    <b>FRAKCJE MOJAVE</b>
+                </div>
+            </a>
+            <a href="kontakt.html">
+                <div class="linkPrzycisk">
+                    <b>KONTAKT</b>
+                </div>
+            </a>
+            <a href="informacje.html">
+                <div class="linkPrzycisk">
+                    <b>INFORMACJE</b>
+                </div>
+            </a>
+            
+            <div id="zalogowany">
+                <a href="logowanie.html" class="linkDoProfilu"><b>ZALOGUJ SIĘ</b></a>
+            </div>
+
+            <img src="../resources/fanpage_logo.png" alt="fanpage logo" id="logo-nv">
+        </header>
+
+        <section id="panel-logowania">
+            <div id="naglowek-logowania">
+                <h2>LOGOWANIE</h2>
+            </div>
+            <form>
+                <div class="daneWprowadzaneTloLogowanie">
+                    <label id="label-logowanie">
+                        E-mail
+                    	<input type="text" class="daneWprowadzaneLogowanie" placeholder="Email" id="email-logowanie" required><br>
+                    </label>
+                </div>
+                <div class="daneWprowadzaneTloLogowanie">
+                    <label id="label-logowanie">
+                        Hasło
+                    	<input type="password" class="daneWprowadzaneLogowanie" placeholder="Hasło" id="haslo" required><br>
+                    </label>
+                </div>
+                <input type="submit" value="Zaloguj się" id="przycisk-zaloguj">
+            </form>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../resources/fanpage_platinumchip_logo.ico">
+        <meta charset="utf-8">
+        <meta name="description" content="Strona poświęcona fanom serii Fallout a w szczególności Fallout: New Vegas">
+        <meta name="keywords" content="Fallout, New Vegas, Vegas, NCR, Caesar Legion, House">
+        <meta name="author" content="Mateusz Pałka">
+        <script type="text/javascript" src="script.js"></script>
+        <title>Fallout: New Vegas - Fanpage</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html">
+                <div class="linkPrzycisk">
+                    <b>STRONA GŁÓWNA</b>
+                </div>
+            </a>
+            <a href="frakcje.html">
+                <div class="linkPrzycisk">
+                    <b>FRAKCJE MOJAVE</b>
+                </div>
+            </a>
+            <a href="kontakt.html">
+                <div class="linkPrzycisk">
+                    <b>KONTAKT</b>
+                </div>
+            </a>
+            <a href="informacje.html">
+                <div class="linkPrzycisk">
+                    <b>INFORMACJE</b>
+                </div>
+            </a>
+        
+            <div id="zalogowany">
+                <a href="logowanie.html" class="linkDoProfilu"><b>ZALOGUJ SIĘ</b></a>
+            </div>
+
+            <img src="../resources/fanpage_logo.png" alt="fanpage logo" id="logo-nv">
+        </header>
+
+        <section id="frakcje">
+            <div id="naglowek-frakcji">
+                <img src="../resources/ncr_bear.png" alt="niedźwiedź kalifornii" id="niedzwiedz">
+                <h1 id="napis_frakcje">Frakcje pustkowi Mojave</h1>
+                <img src="../resources/legion_bull.png" alt="byk legionu" id="byk">
+            </div>
+            <table>
+                <tbody>
+                    <tr id="naglowek">
+                        <td><h2>Frakcja</h2></td>
+                        <td><h2>Lider</h2></td>
+                        <td><h2>Ustrój</h2></td>
+                        <td><h2>Ideologia</h2></td>
+                        <td><h2>Stolica</h2></td>
+                        <td><h2>Cytat</h2></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../resources/lucky38.png" alt="Logo Lucky38" class="flagaFrakcji" id="lucky38"><br>Wolna Strefa Ekonomiczna<br>Nowego Vegas</td>
+                        <td><img src="../resources/mr-house.png" alt="zdjecie House'a" class="zdjecieLider"><br><i>Robert Edwin<br>House</i></td>
+                        <td>Autokracja</td>
+                        <td>Autorytaryzm<br>gospodarczy<br>&&<br>Liberalizm<br>kulturowy</td>
+                        <td>Nowe Vegas<br>(Nevada)</td>
+                        <td>
+                            <input type="image" src="../resources/start_icon.png" alt="przycisk sterujący" class="sterowanie" id="przycisk1" onclick="odtwarzaj('cytat1')">
+                            <audio id="cytat1" src="../resources/mr_house.mp3" type="audio/mp3"></audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../resources/caesar_legion.png" alt="Flaga Legionu Cezara" class="flagaFrakcji"><br>Legion Cezara</td>
+                        <td><img src="../resources/caesar.png" alt="zdjęcie Cezara" class="zdjecieLider"><br><i>Edward "Caesar"<br>Sallow</i></td>
+                        <td>Totalitarna<br>dyktatura</td>
+                        <td>Nacjonalizm<br>&&<br>Imperializm</td>
+                        <td>Flagstaff<br>(Arizona)</td>
+                        <td>
+                            <input type="image" src="../resources/start_icon.png" alt="przycisk sterujący" class="sterowanie" id="przycisk2" onclick="odtwarzaj('cytat2')">
+                            <audio id="cytat2" src="../resources/caesar_legion.mp3" type="audio/mp3"></audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../resources/ncr.png" alt="Flaga NCR" class="flagaFrakcji"><br>Republika Nowej Kalifornii</td>
+                        <td><img src="../resources/aaron-kimball.png" alt="zdjęcie Aaron'a Kimball'a" class="zdjecieLider"><br><i>Aaron Kimball</i></td>
+                        <td>Republika<br>Federalna</td>
+                        <td>Demokracja</td>
+                        <td>Cieniste Piaski<br>(Kalifornia)</td>
+                        <td>
+                            <input type="image" src="../resources/start_icon.png" alt="przycisk sterujący" class="sterowanie" id="przycisk3" onclick="odtwarzaj('cytat3')">
+                            <audio id="cytat3" src="../resources/kimball.mp3" typ="audio/mp3"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>

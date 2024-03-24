@@ -1,0 +1,110 @@
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="../resources/fanpage_platinumchip_logo.ico">
+        <meta charset="utf-8">
+        <meta name="description" content="Strona poświęcona fanom serii Fallout a w szczególności Fallout: New Vegas">
+        <meta name="keywords" content="Fallout, New Vegas, Vegas, NCR, Caesar Legion, House">
+        <meta name="author" content="Mateusz Pałka">
+        <script src="script.js"></script>
+        <title>Fallout: New Vegas - Fanpage</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html">
+                <div class="linkPrzycisk">
+                    <b>STRONA GŁÓWNA</b>
+                </div>
+            </a>
+            <a href="frakcje.html">
+                <div class="linkPrzycisk">
+                    <b>FRAKCJE MOJAVE</b>
+                </div>
+            </a>
+            <a href="kontakt.html">
+                <div class="linkPrzycisk">
+                    <b>KONTAKT</b>
+                </div>
+            </a>
+            <a href="informacje.html">
+                <div class="linkPrzycisk">
+                    <b>INFORMACJE</b>
+                </div>
+            </a>
+            
+            <div id="zalogowany">
+                <a href="logowanie.html" class="linkDoProfilu"><b>ZALOGUJ SIĘ</b></a>
+            </div>
+
+            <img src="../resources/fanpage_logo.png" alt="fanpage logo" id="logo-nv">
+        </header>
+
+        <section id="profil">
+            <div>
+            <img src="../resources/no-image.png" alt="zdjecie profilu" id="zdjecie-prof">
+            <form>
+                <p>
+                    <div class="daneProf">
+                        <label>
+                            Nazwa użytkownika: 
+                            <input type="text" class="daneWprowadzane" required><br>
+                        </label>
+                    </div>
+                    <div class="daneProf">
+                        <label>
+                            Imię: 
+                            <input type="text" class="daneWprowadzane" required><br>
+                        </label>
+                    </div>
+                    <div class="daneProf">
+                        <label>
+                            Nazwisko: 
+                            <input type="text" class="daneWprowadzane" required><br>
+                        </label>
+                    </div>
+                    <div class="daneProf">
+                        <label>
+                            Email: 
+                            <input type="text" class="daneWprowadzane" required><br>
+                        </label>
+                    </div>
+                    <div class="daneProf">
+                        <label>
+                        Tel: 
+                        <input type="text" class="daneWprowadzane" required><br>
+                        </label>
+                    </div>
+                    <label>
+                        <b>Bio:</b>
+                        <div id="dane-bio">
+                            <textarea id="bio"></textarea>
+                        </div>
+                        <div id="dane-edytuj">
+                            <input type="submit" value="Zatwierdź zmiany" id="przycisk-edytuj">
+                        </div>
+                    </label>
+                </p>
+            </form>
+        </section>
+
+        <script>
+            function wyswietlProfil() {
+                const params = new URLSearchParams(window.location.search);
+                const uzytkownik = params.get("uzytkownik");
+    
+                fetch("users.json").then(response => response.json()).then(data => {
+                    const user = data[uzytkownik];
+    
+                    document.getElementById("nazwa").textContent = user.nazwa;
+                    document.getElementById("imie-prof").textContent = user.imie;
+                    document.getElementById("nazwisko-prof").textContent = user.nazwisko;
+                    document.getElementById("email").textContent = user.email;
+                    document.getElementById("tel").textContent = user.tel;
+                    document.getElementById("bio").textContent = user.bio;
+                });
+            }
+            wyswietlProfil();
+        </script>
+    </body>
+</html>

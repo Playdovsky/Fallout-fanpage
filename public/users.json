@@ -1,0 +1,30 @@
+{
+    "osoba1": {
+        "nazwa": "Playdovsky",
+        "imie": "Mateusz",
+        "nazwisko": "Pałka",
+        "email": "UL0482372@edu.uni.lodz.pl",
+        "haslo": "p@lk@",
+        "tel": "577 652 587",
+        "bio": "Cześć, mam na imię Mateusz i pasjonuję się Falloutem od ponad dekady, jestem również administratorem tej strony więc jeśli masz jakieś pytania możesz śmiało pisać na mój email lub przez formularz kontaktowy :)"
+    },
+    "osoba2": {
+        "nazwa": "TurboUser",
+        "imie": "Janusz",
+        "nazwisko": "Kowalski",
+        "email": "tubix21@onet.eu",
+        "haslo": "k0walsk1",
+        "tel": "761 777 546",
+        "bio": "Hejka dzięki, że zajrzałeś na mój profil ale niestety nie ma tu nic ciekawego xD"
+    },
+    "osoba3": {
+        "nazwa": "The_Plague_Doctor",
+        "imie": "Wojciech",
+        "nazwisko": "Zakolak",
+        "email": "plague_doctor3@wp.pl",
+        "haslo": "zak0l@k",
+        "tel": "575 535 726",
+        "bio": "Siema, jestem Wojtek, lubie grać w gry więc jak nie jestem teraz online to znaczy, że gram xd. A i jedna ważna rzecz, nie spamcie mi na maila bo już mam całą skrzynkę zawaloną."
+    }
+}
+
